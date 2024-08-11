@@ -1,0 +1,446 @@
+01:42:38 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000201155611D0>
+01:42:38 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x00000201154A1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:42:38 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x00000201154A1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:42:38 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:42:38 PM: ERROR [cursorDelPool.py:20] Ocurrió una excepción: relation "usuario" does not exist
+LINE 1: INSERT INTO usuario(username,password) VALUES('jose','1234')
+                    ^
+ <class 'psycopg2.errors.UndefinedTable'> <traceback object at 0x0000020115561700>
+01:42:38 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x00000201154A1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:43:32 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000219997FA3D0>
+01:43:32 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000021999748E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:43:32 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000021999748E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:43:32 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:43:32 PM: ERROR [cursorDelPool.py:20] Ocurrió una excepción: null value in column "id_usuario" of relation "usuario" violates not-null constraint
+DETAIL:  Failing row contains (null, jose, 1234).
+ <class 'psycopg2.errors.NotNullViolation'> <traceback object at 0x00000219997FA740>
+01:43:32 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000021999748E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000153CB22A3D0>
+01:49:29 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:49:29 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:49:29 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [usuarioDAO.py:51] Usuarios insertados: 1
+01:49:29 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:49:29 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:49:29 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 1
+01:49:29 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:49:29 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:49:29 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x00000153CB178E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:49:29 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: jose,
+        Username: 4321,
+        Password: 1
+        
+01:49:29 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: Manuel
+,
+        Username: 7896123,
+        Password: 2
+        
+01:49:29 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: jose,
+        Username: 1234,
+        Password: 3
+        
+01:51:43 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001DADBBB11D0>
+01:51:43 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:51:43 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:51:43 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [usuarioDAO.py:51] Usuarios insertados: 1
+01:51:43 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:51:43 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:51:43 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 0
+01:51:43 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:51:43 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:51:43 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001DADBAF1690; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:51:43 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: jose,
+        Username: 4321,
+        Password: 1
+        
+01:51:43 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: Manuel
+,
+        Username: 7896123,
+        Password: 2
+        
+01:51:43 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: jose,
+        Username: 1234,
+        Password: 3
+        
+01:51:43 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: jose,
+        Username: 1234,
+        Password: 4
+        
+01:52:59 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001EA6B09A4D0>
+01:52:59 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:52:59 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:52:59 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [usuarioDAO.py:51] Usuarios insertados: 1
+01:52:59 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:52:59 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:52:59 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 0
+01:52:59 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:52:59 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:52:59 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001EA6AFE8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:52:59 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 1,
+        Username: None,
+        Password: None
+        
+01:52:59 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 2,
+        Username: None,
+        Password: None
+        
+01:52:59 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 3,
+        Username: None,
+        Password: None
+        
+01:52:59 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 4,
+        Username: None,
+        Password: None
+        
+01:52:59 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 5,
+        Username: jose,
+        Password: 1234
+        
+01:53:27 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000029A5F2CA3D0>
+01:53:27 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:53:27 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:53:27 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [usuarioDAO.py:51] Usuarios insertados: 1
+01:53:27 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:53:27 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:53:27 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 0
+01:53:27 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:53:27 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:53:27 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000029A5F218E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:27 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 5,
+        Username: jose,
+        Password: 1234
+        
+01:53:27 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 6,
+        Username: jose,
+        Password: 1234
+        
+01:53:39 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001AB56B6A3D0>
+01:53:39 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:53:39 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:53:39 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [usuarioDAO.py:51] Usuarios insertados: 1
+01:53:39 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:53:39 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:53:39 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 0
+01:53:39 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:53:39 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:53:39 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001AB56AB8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:53:39 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 5,
+        Username: jose,
+        Password: 1234
+        
+01:53:39 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 6,
+        Username: jose,
+        Password: 1234
+        
+01:53:39 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 7,
+        Username: jose,
+        Password: 1234
+        
+01:54:41 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000021D17F3A3D0>
+01:54:41 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:54:41 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:54:41 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [usuarioDAO.py:51] Usuarios insertados: 1
+
+01:54:41 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:54:41 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:54:41 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 0
+
+01:54:41 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:54:41 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:54:41 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000021D17E88E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:54:41 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 5,
+        Username: jose,
+        Password: 1234
+        
+01:54:41 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 6,
+        Username: jose,
+        Password: 1234
+        
+01:54:41 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 7,
+        Username: jose,
+        Password: 1234
+        
+01:54:41 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 8,
+        Username: jose,
+        Password: 1234
+        
+01:56:26 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000202879DA350>
+01:56:26 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:56:26 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:56:26 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [usuarioDAO.py:52] Usuarios insertados: 1
+
+01:56:26 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [usuarioDAO.py:35] Valores: (5, 'Manuel', '4321')
+01:56:26 PM: DEBUG [usuarioDAO.py:36] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:56:26 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:56:26 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [usuarioDAO.py:56] Usuarios actualizados: 0
+
+01:56:26 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:56:26 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:56:26 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000020287928E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:56:26 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 5,
+        Username: jose,
+        Password: 1234
+        
+01:56:26 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 6,
+        Username: jose,
+        Password: 1234
+        
+01:56:26 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 7,
+        Username: jose,
+        Password: 1234
+        
+01:56:26 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 8,
+        Username: jose,
+        Password: 1234
+        
+01:56:26 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 9,
+        Username: jose,
+        Password: 1234
+        
+01:59:38 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000015C4257A350>
+01:59:38 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+01:59:38 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:59:38 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [usuarioDAO.py:52] Usuarios insertados: 1
+
+01:59:38 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [usuarioDAO.py:35] Valores: (5, 'Manuel', '4321')
+01:59:38 PM: DEBUG [usuarioDAO.py:36] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+01:59:38 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:59:38 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [usuarioDAO.py:56] Usuarios actualizados: 0
+
+01:59:38 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+01:59:38 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+01:59:38 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000015C424C8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+01:59:38 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 5,
+        Username: Manuel,
+        Password: 91
+        
+01:59:38 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 10,
+        Username: jose,
+        Password: 1234
+        
+02:00:09 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000024CFE1DA050>
+02:00:09 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000024CFE128E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:00:09 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000024CFE128E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:00:09 PM: DEBUG [usuarioDAO.py:35] Valores: (5, 'Manuel', '4321')
+02:00:09 PM: DEBUG [usuarioDAO.py:36] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+02:00:09 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:00:09 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000024CFE128E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:00:09 PM: DEBUG [usuarioDAO.py:56] Usuarios actualizados: 0
+
+02:00:09 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000024CFE128E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:00:09 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000024CFE128E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:00:09 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+02:00:09 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:00:09 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000024CFE128E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:00:09 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 5,
+        Username: Manuel,
+        Password: 91
+        
+02:00:09 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 10,
+        Username: jose,
+        Password: 1234
+        
+02:03:10 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001A3AF16A350>
+02:03:10 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001A3AF0B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:10 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001A3AF0B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:10 PM: DEBUG [usuarioDAO.py:35] Valores: (5, 'Manuel', '4321')
+02:03:10 PM: DEBUG [usuarioDAO.py:36] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+02:03:10 PM: ERROR [cursorDelPool.py:20] Ocurrió una excepción: type object 'UsuarioDAO' has no attribute '_UsuarioDAO__UPDATE' <class 'AttributeError'> <traceback object at 0x000001A3AD0F3900>
+02:03:10 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001A3AF0B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000139C29D3910>
+02:03:19 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x00000139C49A8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x00000139C49A8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [usuarioDAO.py:35] Valores: (5, 'Manuel', '4321')
+02:03:19 PM: DEBUG [usuarioDAO.py:36] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+02:03:19 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:03:19 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x00000139C49A8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [usuarioDAO.py:56] Usuarios actualizados: 0
+
+02:03:19 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x00000139C49A8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x00000139C49A8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+02:03:19 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:03:19 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x00000139C49A8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:19 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 5,
+        Username: Manuel,
+        Password: 91
+        
+02:03:19 PM: DEBUG [usuarioDAO.py:60] 
+        ID Usuario: 10,
+        Username: jose,
+        Password: 1234
+        
+02:03:46 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000023DF81CE290>
+02:03:46 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000023DF8118E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:46 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000023DF8118E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:46 PM: DEBUG [usuarioDAO.py:36] Valores: (5, 'Manuel', '4321')
+02:03:46 PM: DEBUG [usuarioDAO.py:37] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario=%s'
+02:03:46 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:03:46 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000023DF8118E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:46 PM: DEBUG [usuarioDAO.py:58] Usuarios actualizados: 0
+
+02:03:46 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000023DF8118E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:46 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000023DF8118E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:46 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+02:03:46 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:03:46 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000023DF8118E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:03:46 PM: DEBUG [usuarioDAO.py:62] 
+        ID Usuario: 5,
+        Username: Manuel,
+        Password: 91
+        
+02:03:46 PM: DEBUG [usuarioDAO.py:62] 
+        ID Usuario: 10,
+        Username: jose,
+        Password: 1234
+        
+02:05:13 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001F1F316A410>
+02:05:13 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001F1F30B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:05:13 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001F1F30B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:05:13 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario= %s'
+02:05:13 PM: DEBUG [usuarioDAO.py:37] Valores actualizados: ('Manuel', '4321', 5)
+02:05:13 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:05:13 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001F1F30B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:05:13 PM: DEBUG [usuarioDAO.py:55] Usuarios actualizados: 1
+
+02:05:13 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x000001F1F30B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:05:13 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x000001F1F30B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:05:13 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+02:05:13 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:05:13 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x000001F1F30B8E10; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:05:13 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 5,
+        Username: Manuel,
+        Password: 4321
+        
+02:05:13 PM: DEBUG [usuarioDAO.py:59] 
+        ID Usuario: 10,
+        Username: jose,
+        Password: 1234
+        
+02:07:32 PM: DEBUG [conexion.py:26] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000017E0F64FE50>
+02:07:32 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:07:32 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:07:32 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+02:07:32 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:07:32 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:07:51 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:07:51 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:07:51 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+02:07:51 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:07:51 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:14 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:14 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:14 PM: DEBUG [usuarioDAO.py:27] b'INSERT INTO usuario(username,password) VALUES(%s,%s)'
+02:08:14 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:08:14 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:34 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:34 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:34 PM: DEBUG [usuarioDAO.py:35] b'UPDATE usuario SET username=%s,password=%s WHERE id_usuario= %s'
+02:08:34 PM: DEBUG [usuarioDAO.py:37] Valores actualizados: ('pruebaEliminacion', 'adios', 2)
+02:08:34 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:08:34 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:38 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:38 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:38 PM: DEBUG [usuarioDAO.py:43] b'DELETE FROM usuario WHERE id_usuario=%s'
+02:08:38 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:08:38 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:39 PM: DEBUG [conexion.py:35] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:39 PM: DEBUG [cursorDelPool.py:14] Conexión obtenida del pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
+02:08:39 PM: DEBUG [usuarioDAO.py:14] b'SELECT * FROM usuario ORDER BY id_usuario'
+02:08:39 PM: DEBUG [cursorDelPool.py:23] Commit de la transacción
+02:08:39 PM: DEBUG [conexion.py:41] Conexión liberada al pool: <connection object at 0x0000017E11459470; dsn: 'user=postgres password=xxx dbname=Test_db host=127.0.0.1 port=5432', closed: 0>
